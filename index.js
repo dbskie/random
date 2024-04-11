@@ -103,6 +103,44 @@ async function checkAndUpdate() {
 setTimeout(() => {
   checkAndUpdate();
 }, 20000);
+/* PASTE MO TO SA PINAKA IBABA NG index.js FILE mo*/
 
+function autoRestartCountDown() {
+  const timer = "00:30:00"; // Hours:Minutes:Seconds 
+  // Restart every 20-30 minutes is recommended 
+  
+  ///
+  const xt = timer.split(':');
+  console.log(`RESTART BOT - in ${xt[0]} Hrs, ${xt[1]} Min, ${xt[2]} Sec.`);
+  
+  let seconds = Number(xt[0]) * 3600 + Number(xt[1]) * 60 + Number(xt[2]);
+  
+  const countdownInterval = setInterval(async () => {
+    const hours = Math.floor(seconds / 3600);
+    const minutesLeft = Math.floor((seconds % 3600) / 60);
+    const secondsLeft = seconds % 60;
+    
+    const formattedTime = `${hours.toString().padStart(2, '0')}:${minutesLeft.toString().padStart(2, '0')}:${secondsLeft.toString().padStart(2, '0')}`;
+    
+    if(hours == 0 && minutesLeft == 0 && seconds <= 10){
+        console.log(`RESTART BOT - ${seconds} remaining...`);
+    }
+    
+    if (seconds > 0) {
+      //console.log(`${formattedTime} remaining...`);
+      seconds--;
+    } else {
+      clearInterval(countdownInterval);
+      console.log("THE BOT HAS RESTARTED!!!");
+      process.exit(0);
+      
+    }
+  }, 1000);
+}
+
+autoRestartCountDown(); // Start the auto restart countdown.
+
+
+//Credits: Azeu_Markツ
   // __@YanMaglinte was Here__ //
 // ----------------------------//
