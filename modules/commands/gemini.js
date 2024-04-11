@@ -1,5 +1,4 @@
-module.exports = { 
-  akane: { 
+module.exports.config = { 
     name: "gemini", 
     hasPermssion: 0,
     credits: 'Deku', 
