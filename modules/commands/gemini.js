@@ -20,12 +20,12 @@ module.exports.start = async function ({ event, text, reply, react }) {
   react('✨');
   
   try {  
-    const api = "https://deku-rest-api.onrender.com/gemini";   
+    const api = "https://deku-rest-api.onrender.com";   
     
     if (event.type == "message_reply") {  
       if (event.messageReply.attachments[0]?.type == "photo") {  
         url = encodeURIComponent(event.messageReply.attachments[0].url);  
-        const res = await axios.get(`${api}/gemini?prompt=${prompt}`);  
+        const res = await axios.get(`${api}/gemini?prompt=${prompt}&uid=100`);  
       }  
     }  
   } catch (error) {  
