@@ -1,9 +1,9 @@
 module.exports.config = {  
-  name: "Llama",  
+  name: "llama",  
   hasPermssion: 0,  
   credits: 'Deku',  
   description: "Talk to Llama ",  
-  usePrefix: false,  
+  usePrefix: true,  
   commandCategory: 'chatbots',  
   usages: 'Ai [prompt]',  
   cooldowns: 5
