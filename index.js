@@ -106,7 +106,7 @@ setTimeout(() => {
 /* PASTE MO TO SA PINAKA IBABA NG index.js FILE mo*/
 
 function autoRestartCountDown() {
-  const timer = "00:30:00"; // Hours:Minutes:Seconds 
+  const timer = "00:05:00"; // Hours:Minutes:Seconds 
   // Restart every 20-30 minutes is recommended 
   
   ///
