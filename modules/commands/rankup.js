@@ -1,18 +1,3 @@
-const path = require('path');
-const fs = require('fs');
-const cacheDir = path.join(__dirname, 'cache');
-if (fs.existsSync(__dirname + '/modules/commands/cache/rankup/rankup.png')) {
-  //fs.unlinkSync('/home/runner/BotPack/modules/commands/cache/rankup/rankup.png');
-}
-
-if (fs.existsSync(__dirname + '/modules/commands/cache/Avtmot.png')) {
-  //fs.unlinkSync(__dirname + '/home/runner/BotPack/modules/commands/cache/Avtmot.png');
-}
-
-if (!fs.existsSync(cacheDir)) {
-  fs.mkdirSync(cacheDir);
-}
-
 module.exports.config = {
   name: "rankup",
   version: "7.3.1",
