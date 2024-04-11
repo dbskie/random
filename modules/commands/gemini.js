@@ -1,10 +1,12 @@
 module.exports.config = {
-    name: "gemini",
-	hasPermssion: 0,
-    author: "Deku", //https://facebook.com/joshg101
-    description: "Talk to Gemini (conversational)",
-   usePrefix: false,
-   commandCategory: 'chatbots',
+  name: 'gemini',
+  hasPermssion: 0,
+  credits: 'Deku',
+  description: 'Gemini Conversational AI',
+  usePrefix: false,
+  commandCategory: 'chatbots',
+  usages: 'Ai [prompt]',
+  cooldowns: 5,
   },
   start: async function ({ event, text, reply, react }) {
     const axios = require("axios");
