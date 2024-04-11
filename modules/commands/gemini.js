@@ -7,7 +7,7 @@ module.exports.config = {
   commandCategory: 'chatbots',
   usages: 'Ai [prompt]',
   cooldowns: 5,
-  }, 
+  } 
   start: async function ({ event, text, reply, react }) { 
     const axios = require("axios"); 
     let prompt = text.join(" "), 
