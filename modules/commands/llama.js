@@ -32,7 +32,7 @@ module.exports.run = async function ({ api, event, args }) {
 
     if (response.data && response.data.response) {
       const generatedText = response.data.response;
-      api.sendMessage({ body: generatedText, attachment: null }, event.threadID, messageID);
+      api.sendMessage('Answer:${generatedText}, event.threadID, messageID);
     } else {
       console.error('API response did not contain expected data:', response.data);
       api.sendMessage('❌ An error occurred while generating the text response. Please try again later.', event.threadID, messageID);
