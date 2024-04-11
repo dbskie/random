@@ -28,7 +28,7 @@ module.exports.run = async function ({ api, event, args }) {
         api.sendMessage('Naghahanap pa...', event.threadID);
 
         // Delay
-        await new Promise(resolve => setTimeout(resolve, 2000)); // Adjust the delay time as needed
+        await new Promise((resolve => setTimeout(resolve, 2000)); // Adjust the delay time as needed
 
         const gpt4_api = `https://deku-rest-api.onrender.com/llama-70b?prompt=${encodeURIComponent(prompt)}`;
         const manilaTime = moment.tz('Asia/Manila');
