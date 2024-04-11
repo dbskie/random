@@ -1,8 +1,8 @@
 module.exports.config = {  
-  name: "gemini",  
+  name: "Llama",  
   hasPermssion: 0,  
   credits: 'Deku',  
-  description: "Talk to Gemini (conversational)",  
+  description: "Talk to Llama ",  
   usePrefix: false,  
   commandCategory: 'chatbots',  
   usages: 'Ai [prompt]',  
@@ -25,7 +25,7 @@ module.exports.start = async function ({ event, text, reply, react }) {
     if (event.type == "message_reply") {  
       if (event.messageReply.attachments[0]?.type == "photo") {  
         url = encodeURIComponent(event.messageReply.attachments[0].url);  
-        const res = await axios.get(`${api}/gemini?prompt=${prompt}&uid=100`);  
+        const res = await axios.get(`${api}/llama-70b?prompt=${prompt}`);  
       }  
     }  
   } catch (error) {  
