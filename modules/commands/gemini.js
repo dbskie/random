@@ -20,7 +20,7 @@ module.exports.start = async function ({ event, text, reply, react }) {
   react('✨');
   
   try {  
-    const api = "https://gemini-api.replit.app";   
+    const api = "https://deku-rest-api.onrender.com/gemini";   
     
     if (event.type == "message_reply") {  
       if (event.messageReply.attachments[0]?.type == "photo") {  
