@@ -2,7 +2,7 @@ const axios = require("axios");
 let fontEnabled = true;
 
 module.exports.config = {
-  name: "gempro",
+  name: "gemini",
   version: "6.2",
   permission: 0,
   credits: "Hazeyy",
@@ -17,7 +17,7 @@ async function convertImageToCaption(imageURL, api, event, inputText) {
   try {
     api.sendMessage("🕟 | 𝙶𝚎𝚖𝚒𝚗𝚒 𝙰𝙸 𝚁𝚎𝚌𝚘𝚐𝚗𝚒𝚣𝚒𝚗𝚐 𝙸𝚖𝚊𝚐𝚎, 𝚙𝚕𝚎𝚊𝚜𝚎 𝚠𝚊𝚒𝚝...", event.threadID, event.messageID);
 
-    const response = await axios.get(` https://haze-ultra-advanced-d80346bab842.herokuapp.com/bard/ultra?text=${encodeURIComponent(inputText)}&image_url=${encodeURIComponent(imageURL)}`);
+    const response = await axios.get(` https://joshweb.click/gemini?prompt=${encodeURIComponent(inputText)}&url=${encodeURIComponent(imageURL)}`);
     const caption = response.data.response;
 
     if (caption) {
