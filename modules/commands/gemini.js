@@ -27,7 +27,7 @@ module.exports.handleEvent = async function ({ api, event }) {
     api.sendMessage("🗨️ | 𝙶𝚎𝚖𝚒𝚗𝚒 𝙰𝙸 𝚒𝚜 𝚜𝚎𝚊𝚛𝚌𝚑𝚒𝚗𝚐, 𝙿𝚕𝚎𝚊𝚜𝚎 𝚠𝚊𝚒𝚝...", event.threadID, event.messageID);
 
     const prompt = args.join(" ");
-    const response = await axios.get(`https://haze-ai-models-8d44a842ac90.herokuapp.com/gemini?prompt=${encodeURIComponent(prompt)}`);
+    const response = await axios.get(`https://haze-ultra-advanced-d80346bab842.herokuapp.com/bard?question=${encodeURIComponent(prompt)}`);
 
     if (response.data && response.data.text) {
       const formattedText = formatFont(response.data.text);
